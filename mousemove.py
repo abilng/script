@@ -43,31 +43,37 @@ except ImportError:
 class Mouse:
 	def __init__(self):
 		self.display = Display()
-#fn simulate a mouse press
+
 	def press(self, x, y, button = 1):
+		"""simulate a mouse press"""
 		self.move(x, y)
 		fake_input(self.display, X.ButtonPress, button)
 		self.display.sync()
-#fn simulate release of pressed-mouse
+
 	def release(self, x, y, button = 1):
+		"""simulate release of pressed-mouse"""
 		self.move(x, y)
 		fake_input(self.display, X.ButtonRelease,button)
 		self.display.sync()
-#fn move  mouse
+
 	def move(self, x, y):
+		"""move  mouse"""
 		fake_input(self.display, X.MotionNotify, x=x, y=y)
 		self.display.sync()
-#return curent postion
+
 	def position(self):
+		"""return curent postion"""
 		coord = self.display.screen().root.query_pointer()._data
 		return coord["root_x"], coord["root_y"]
-#return screen size
+
 	def screen_size(self):
+		"""return screen size"""
 		width = self.display.screen().width_in_pixels
 		height = self.display.screen().height_in_pixels
 		return width, height
-#fn simulate a mouse left or right click
+
 	def click(self,x,y,clicktype="LEFT"):
+		"""simulate a mouse left or right click"""
 		if clicktype=="LEFT":
 			self.press(x,y)
 			self.release(x,y)
