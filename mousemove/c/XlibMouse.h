@@ -27,7 +27,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <X11/Xlib.h>
-
+#include <X11/extensions/XTest.h>
 #define LeftClick 1
 #define RightClick 3
 #define False 0
