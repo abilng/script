@@ -5,15 +5,15 @@
 
 int main()
 {
-start();
+XlibMouseStart();
 for(;;)
 {
 int x,y;
 scanf("%d %d",&x,&y);
 if(x==0&&y==0) break;
 // mouseclick(x,y,LeftClick);
-getMouseloc(&x,&y);
+getMouseLoc(&x,&y);
 printf("%d %d \n",x,y);
 }
-end();
+XlibMouseEnd();
 }
