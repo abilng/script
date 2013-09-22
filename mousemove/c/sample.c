@@ -9,8 +9,8 @@ XlibMouseStart();
 for(;;)
 {
 int x,y;
-scanf("%d %d",&x,&y);
-if(x==0&&y==0) break;
+scanf("%d",&x);
+if(x==0) break;
 // mouseclick(x,y,LeftClick);
 getMouseLoc(&x,&y);
 printf("%d %d \n",x,y);
