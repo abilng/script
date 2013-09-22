@@ -9,7 +9,7 @@ XlibMouseStart();
 for(;;)
 {
 int x,y;
-scanf("%d",&x);
+scanf("%d,&x);
 if(x==0) break;
 // mouseclick(x,y,LeftClick);
 getMouseLoc(&x,&y);
