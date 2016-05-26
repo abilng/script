@@ -22,6 +22,8 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
+#require gsed in Mac. Install using `brew install gnu-sed`.
+
 usage() {
     echo "Usage: $0 directory";
     exit;
